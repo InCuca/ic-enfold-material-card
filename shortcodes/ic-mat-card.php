@@ -221,7 +221,10 @@ if ( !class_exists( 'ic_mat_card' ) ) {
 			return $params;
 		}
 
-		function shortcode_handler($atts, $content = "", $shortcodename = "", $meta = "")
+		function shortcode_handler($atts, $content = "", $shortcodename = "", $meta = array(
+			'el_class' => '',
+			'custom_markup' => '',
+		))
 		{
 			extract(AviaHelper::av_mobile_sizes($atts)); //return $av_font_classes, $av_title_font_classes and $av_display_classes 
 
